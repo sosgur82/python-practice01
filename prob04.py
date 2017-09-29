@@ -11,9 +11,20 @@ s = """
     </body>
 </html>"""
 
-while True:
-    if s.find('<') == -1:
-        break
+isTag = False
+result = ''
 
-print(s)
+for c in s:
+    if c == '<':
+        isTag = True
+        result += ' '
+    elif c == '>':
+        isTag = False
+        result += ' '
+    elif c == '\n':
+        result += '\n'
+    elif isTag == False:
+        result += c
+
+print(result)
 
