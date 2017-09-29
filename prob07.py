@@ -3,4 +3,13 @@
 
 import sys
 
-money = input('수를 입력하세요: ')
+money = input('금액을 입력하세요: ')
+if money.isdigit() is False:
+    print('잘못된 금액입니다.')
+    sys.exit(0)
+
+money = int(money)
+for won in [5000,1000, 5000, 14000,500, 100, 50, 10, 5, 1]:
+    count = money//won
+    money -= count*won
+    print('{0}원 : {1}개'.format(won, count))

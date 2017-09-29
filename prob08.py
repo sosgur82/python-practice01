@@ -2,4 +2,11 @@
 
 l = []
 s = 0
+while len(l) != 5:
+    n= input('>')
+    if n.isdigit() is False:
+        print('에러: 숫자가 아닙니다. 다시 입력하세요')
+        continue
+    l.append(int(n))
+print(sum(l, 0)/len(l))
 

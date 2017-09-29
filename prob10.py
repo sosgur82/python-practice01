@@ -11,5 +11,6 @@ elif menu == '만두':
 else:
     price = 0
 
-print('가격: {0}'.format(price))
+menu_dict = {'오뎅': 300, '순대': 400, '만두': 500 }
+print('가격: {0}'.format(menu_dict[menu]))
 

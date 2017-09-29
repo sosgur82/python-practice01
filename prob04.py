@@ -11,5 +11,9 @@ s = """
     </body>
 </html>"""
 
+while True:
+    if s.find('<') == -1:
+        break
 
 print(s)
+
